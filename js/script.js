@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    // 1. Slider Banner (Chạy tự động)
     new Swiper('.swiper-slider-main', {
         slidesPerView: 1,
         loop: true,
@@ -8,7 +7,6 @@ $(document).ready(function(){
         pagination: { el: '.swiper-pagination', clickable: true },
     });
 
-    // 2. Slider Danh mục
     new Swiper('.swiper-cate', {
         slidesPerView: 2,
         spaceBetween: 10,
@@ -19,24 +17,16 @@ $(document).ready(function(){
         }
     });
 
-    // 3. Logic Lọc Sản phẩm (Filter)
-    window.filterSelection = function(category, element) {
-        // Xóa class active ở nút cũ
+   window.filterSelection = function(category, element) {
         $('.product-item--cate').removeClass('active');
-        // Thêm class active cho nút vừa bấm
         $(element).addClass('active');
 
         if (category == 'all') {
-            // Nếu chọn tất cả -> Hiện hết
             $('.filter-item').addClass('show');
         } else {
-            // Ẩn hết trước
             $('.filter-item').removeClass('show');
-            // Chỉ hiện món thuộc danh mục đó
-            $('.filter-item.cat-' + category).addClass('show');
+            $('.filter-item.category-' + category).addClass('show'); 
         }
     };
-
-    // Mặc định chọn "Tất cả" khi tải trang
     filterSelection('all', $('.product-item--cate').first());
 });
