@@ -180,66 +180,61 @@ a:hover { color: var(--color-highlight); }
 
 /* Responsive adjustments */
 @media (max-width: 500px) {
-    header .row-align-center > div > .row > div:nth-child(1){ flex: 0 0 30%; max-width: 30%; }
-    header .row-align-center > div > .row > div:nth-child(2){ flex: 0 0 70%; max-width: 70%; }
+    /* Đảm bảo logo trong header căn giữa đẹp */
+    header .row-align-center > div > .row > div:nth-child(1){ flex: 0 0 100%; max-width: 100%; text-align: center; }
 }
+
 .product-item-home .inner-image.w-75 {
     width: 100% !important; /* Override inline w-75 to fill the column */
 }
 
-/* --- BẮT ĐẦU PHẦN FIX RESPONSIVE MOBILE (ĐÃ THÊM MỚI) --- */
+/* --- BẮT ĐẦU PHẦN FIX RESPONSIVE MOBILE (ĐÃ CẬP NHẬT MỚI NHẤT) --- */
 @media (max-width: 767px) {
-    /* 1. Fix lỗi Hộp Hotline màu đỏ ở Header bị vỡ */
+    /* 1. Sửa lỗi hộp đỏ Hotline bị vỡ/méo trên mobile */
+    .mobile-hotline-box {
+        background-image: none !important; /* Tắt hình nền ảnh (vì dễ bị co méo) */
+        background-color: #BF1927 !important; /* Dùng màu đỏ thuần */
+        padding: 15px !important;
+        margin-top: 10px;
+    }
+
     header .box-order {
-        background-size: 100% 100% !important; /* Bắt hình nền co giãn theo nội dung */
-        padding: 10px !important;
         width: 100% !important;
-        max-width: 300px; /* Giới hạn chiều rộng để không bị bè ra */
+        max-width: 300px;
         margin: 0 auto;
     }
     
     header .hotline {
-        font-size: 1.4rem !important; /* Giảm cỡ chữ hotline */
+        font-size: 1.4rem !important;
     }
-    
     header .hotline span {
-        font-size: 1.8rem !important; /* Giảm cỡ số điện thoại */
+        font-size: 1.8rem !important;
     }
-
     header .box-time p {
         font-size: 1.6rem !important;
     }
 
-    /* 2. Fix lỗi phần "HUNGRY? ĐÃ CÓ MẶT TRÊN" */
+    /* 2. Sửa lỗi phần "HUNGRY?" và Logo đối tác */
     .title-contact-bottom span {
-        font-size: 3rem !important; /* Giảm cỡ chữ tiêu đề to */
+        font-size: 3rem !important;
     }
-    
     .title-contact-bottom {
         font-size: 2rem !important;
     }
 
-    /* Đề phòng nếu bạn quên sửa HTML, dòng này sẽ ép ảnh nhỏ lại */
-    .title-contact-bottom img[src*="shoppefood"], 
-    .title-contact-bottom img[src*="ShopeeFood"] {
-        height: 40px !important; 
-        width: auto !important;
-        margin-right: 10px !important;
+    /* Cho phép logo Shopee/Grab to hơn trên mobile */
+    .partner-logo {
+        height: 60px !important; /* Kích thước to rõ trên điện thoại */
+        margin: 0 10px !important;
     }
 
-    .title-contact-bottom p {
-        height: auto !important;
-        font-size: 1.6rem !important;
-        margin: 0 !important;
-    }
-
-    /* Căn giữa lại logo các app giao hàng */
+    /* Căn giữa logo các app giao hàng */
     .title-contact-bottom .d-flex {
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    /* 3. Tinh chỉnh lại danh sách sản phẩm cho gọn */
+    /* 3. Tinh chỉnh danh sách sản phẩm */
     .product-item-home .product-title {
         font-size: 1.6rem !important;
         padding: 1rem !important;

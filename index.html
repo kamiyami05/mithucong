@@ -30,6 +30,18 @@
             border: 2px solid #BF1927;
             border-radius: 50%;
         }
+        
+        /* Class riêng cho logo đối tác để chỉnh size */
+        .partner-logo {
+            height: 80px; /* Chiều cao mặc định trên Laptop */
+            width: auto;
+            object-fit: contain;
+            margin: 0 15px;
+            transition: transform 0.3s;
+        }
+        .partner-logo:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 
@@ -38,28 +50,28 @@
         <div nh-row="25zil1k" class="row-align-center py-3 bg-row-menu">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-md-3 col-6">
+                    <div class="col-md-3 col-12 text-center text-md-left">
                         <div nh-block="qhdw2uy" nh-block-cache="true" class="">
                             <div class="logo-section">
                                 <a href="index.html">
                                     <h1 style="margin: 0; line-height: 0;">
-                                        <img class="img-fluid" src="img/logo3.png" alt="MÌ THỦ CÔNG - PHỞ XÀO & CƠM" style="max-height: 80px;">
+                                        <img class="img-fluid" src="img/logo3.png" alt="MÌ THỦ CÔNG - PHỞ XÀO & CƠM" style="max-height: 90px;">
                                     </h1>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-9 col-6 px-0 text-right text-md-left">
+                    <div class="col-md-9 d-none d-md-block px-0 text-right text-md-left">
                         <div nh-block="ohdps8v" nh-block-cache="true" class="">
                             <div class="contact-top d-flex justify-content-end">
                                 <div class="box-order d-flex justify-content-center align-items-center py-2 px-3" nh-lazy="image-background" data-src="https://cdn3622.cdn-template-4s.com/media/template/bg-hotline.webp" style="border-radius: 10px;">
-                                    <div class="hotline mb-0 mr-4 d-none d-md-block" style="font-size: 1.4rem;">
+                                    <div class="hotline mb-0 mr-4" style="font-size: 1.4rem;">
                                         <i class="fa-solid fa-phone"></i> Hotline:<span style="font-size: 2rem;">0931 203 002</span>
                                     </div>
                                     <div class="time-open">
                                         <img src="https://cdn3622.cdn-template-4s.com/media/template/icon-giomocua.webp" alt="Giờ mở cửa" style="height: 35px;">
-                                        <div class="box-time text-left ml-2 d-none d-md-block">
+                                        <div class="box-time text-left ml-2">
                                             <span class="d-block" style="font-size: 1.2rem; line-height: 1;">giờ mở cửa</span>
                                             <p style="font-size: 1.4rem; margin: 0;">13:00 - 23:00</p>
                                         </div>
@@ -72,7 +84,7 @@
 
                 <div class="row d-md-none mt-3">
                     <div class="col-12">
-                        <div class="box-order py-2 text-center" nh-lazy="image-background" data-src="https://cdn3622.cdn-template-4s.com/media/template/bg-hotline.webp" style="border-radius: 10px;">
+                        <div class="box-order mobile-hotline-box py-2 text-center" style="border-radius: 10px;">
                             <div class="hotline">
                                 <i class="fa-solid fa-phone"></i> Hotline:<span>0901191616</span>
                             </div>
@@ -515,12 +527,12 @@
                                     <div class="col-12 col-md-6">
                                         <div class="title-contact-bottom">
                                             <span>Hungry?</span><br>Đã có mặt trên:
-                                            <div class="mt-2 d-flex align-items-center">
-                                                <img src="img/shoppefood.png" alt="ShopeeFood" class="mr-3 img-fluid" style="max-height: 50px; width: auto;">
-                                                <span style="font-weight: bold; font-size: 1.5rem; color: #00b14f;">GrabFood</span>
+                                            <div class="mt-2 d-flex align-items-center justify-content-center justify-content-md-start">
+                                                <img src="img/shoppefood.png" alt="ShopeeFood" class="partner-logo">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Grab_Logo.svg/1200px-Grab_Logo.svg.png" alt="GrabFood" class="partner-logo">
                                             </div>
                                         </div>
-                                        <address>
+                                        <address class="mt-4">
                                             <p>gọi ngay: <span>0931 203 002</span></p>
                                             <p>Địa chỉ: 71 Bà Triệu, Phường Vũng Tàu, TP. Hồ Chí Minh.</p>
                                         </address>
@@ -529,7 +541,7 @@
                                             <img nh-lazy="image" class="img-fluid" data-src="https://cdn3622.cdn-template-4s.com/media/template/asset-6.webp" alt="Giao hàng nhanh" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6">
+                                    <div class="col-12 col-md-6 mt-4 mt-md-0">
                                         <div class="ratio-4-3">
                                             <img nh-lazy="image" class="img-fluid rounded" data-src="https://cdn3622.cdn-template-4s.com/media/template/banhvietnamfooter.webp" alt="Bánh mì Việt Nam truyền thống" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
                                         </div>
